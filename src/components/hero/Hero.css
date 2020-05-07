@@ -1,0 +1,94 @@
+.showcase {
+  background: url("/background.jpg") no-repeat center center/cover;
+  height: 93vh;
+  position: relative;
+  width: 100%;
+}
+
+.showcase::after {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  content: "";
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.showcase-top {
+  height: 90px;
+  position: relative;
+  z-index: 2;
+}
+
+.showcase-top img {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 170px;
+}
+
+.showcase-top a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  margin-top: 9rem;
+  z-index: 2;
+}
+
+.showcase-content h1 {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+}
+
+.showcase-content p {
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 2rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 960px) {
+  .showcase {
+    height: 70vh;
+  }
+
+  .showcase-top img {
+    left: 5%;
+    transform: translate(0);
+    top: 30%;
+  }
+
+  .showcase-content h1 {
+    font-size: 3.7rem;
+    line-height: 1;
+  }
+
+  .showcase-content p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .showcase::after {
+    box-shadow: inset 80px 80px 250px #000000, inset -80px -80px 250px #000000;
+  }
+}
