@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Hero from "../hero/Hero";
 
 const Header = () => {
@@ -7,9 +8,9 @@ const Header = () => {
       <header className="showcase">
         <div className="showcase-top">
           <img src="logo.png" alt="Netflix" />
-          <a href="#" className="btn btn-rounded">
+          <Link to="#" className="btn btn-rounded">
             Sign In
-          </a>
+          </Link>
         </div>
         <Hero />
       </header>
